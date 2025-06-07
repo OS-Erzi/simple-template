@@ -3,14 +3,14 @@ const TelegramBot = require('node-telegram-bot-api');
 
 const token = process.env.BOT_TOKEN;
 if (!token) {
-  console.error('❌ BOT_TOKEN не найден в .env');
+  console.error('❌ BOT_TOKEN not found в .env');
   process.exit(1);
 }
 
 // Инициализация бота
 const bot = new TelegramBot(token, { polling: true });
 
-console.log('✅ Telegram-бот запущен...');
+console.log('✅ Telegram-бот started...');
 
 // Обработка команды /start
 bot.onText(/\/start/, (msg) => {
